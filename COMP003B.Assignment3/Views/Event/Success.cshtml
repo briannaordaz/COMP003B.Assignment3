@@ -1,0 +1,22 @@
+@model COMP003B.Assignment3.Models.EventRegistration
+
+@{
+    ViewData["Title"] = "Success";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Your Registration has been Successfully submitted!!</h2>
+
+
+<li>Name: @Model.FullName</li>
+<li>Your Email: @Model.Email</li>
+<li>Your event code is: @Model.EventCode</li>
+<li>Tickets: @Model.Tickets</li>
+
+@if (!string.IsNullOrEmpty(Model.ReferralCode))
+{
+    <li> Your referral Code is: @Model.ReferralCode</li>
+}
+
+
+

@@ -29,12 +29,29 @@ public class EventController : Controller
             return View("Register", model);
         }
         
-        return RedirectToAction("Success", "Event");
+        return RedirectToAction("Success", "Event",new
+        {
+            
+        
+            FullName = model.FullName,
+            Email = model.Email,
+            EventCode = model.EventCode,
+            Tickets = model.Tickets,
+            ReferralCode = model.ReferralCode
+        });
     }
 
     [HttpGet("event/success")]
-    public IActionResult Success()
+    public IActionResult Success(string FullName, string Email, string EventCode, int Tickets, string ReferralCode)
     {
+        var model = new EventRegistration
+        {
+            FullName = FullName,
+            Email = Email,
+            EventCode = EventCode,
+            Tickets = Tickets,
+            ReferralCode = ReferralCode
+        };
         return View();
     }
 }
