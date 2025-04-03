@@ -24,5 +24,5 @@ public class EventRegistration
     public int Tickets { get; set; }
     
     
-    public string ReferralCode { get; set; }
+    public string? ReferralCode { get; set; }
 }

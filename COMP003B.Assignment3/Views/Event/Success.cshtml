@@ -5,11 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Your Registration has been Successfully submitted!!</h2>
+<h2>Registration Successful!! </h2>
 
+<p>Your Registration has been Successfully submitted!!</p>
 
 <li>Name: @Model.FullName</li>
-<li>Your Email: @Model.Email</li>
+<li>Email entered: @Model.Email</li>
 <li>Your event code is: @Model.EventCode</li>
 <li>Tickets: @Model.Tickets</li>
 
@@ -18,5 +19,5 @@
     <li> Your referral Code is: @Model.ReferralCode</li>
 }
 
-
+<partial name="_EventNav" />
 

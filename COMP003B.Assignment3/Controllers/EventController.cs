@@ -33,16 +33,16 @@ public class EventController : Controller
         {
             
         
-            FullName = model.FullName,
-            Email = model.Email,
-            EventCode = model.EventCode,
-            Tickets = model.Tickets,
-            ReferralCode = model.ReferralCode
+            model.FullName,
+            model.Email,
+            model.EventCode,
+            model.Tickets,
+            model.ReferralCode
         });
     }
 
     [HttpGet("event/success")]
-    public IActionResult Success(string FullName, string Email, string EventCode, int Tickets, string ReferralCode)
+    public IActionResult Success(string FullName, string Email, string EventCode, int Tickets, string? ReferralCode)
     {
         var model = new EventRegistration
         {
@@ -52,6 +52,6 @@ public class EventController : Controller
             Tickets = Tickets,
             ReferralCode = ReferralCode
         };
-        return View();
+        return View(model);
     }
 }
