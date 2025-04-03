@@ -21,7 +21,7 @@ public class EventRegistration
     
     [Required]
     [Range(1, 10)]
-    public string Tickets { get; set; }
+    public int Tickets { get; set; }
     
     
     public string? ReferralCode { get; set; }
